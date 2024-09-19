@@ -1,26 +1,28 @@
 body {
   background-image: url(bgimg.jpg);
-  background-size: 100% 700px;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding-top: 20px; /* Add margin at the top */
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  max-width: 90%;
   width: 550px;
-  height: 600px;
-  padding-left: 30px;
-  padding-right: 30px;
+  height: auto;
+  padding: 30px;
   border: solid darkblue;
   box-shadow: 0 2px 10px 0 white, 0 2px 10px 2px white;
   border-top-left-radius: 100px;
+  box-sizing: border-box;
 }
 
 .container h1 {
   color: greenyellow;
   text-align: center;
-  font-weight: 600;
-  font-style: italic;
   font-weight: 900;
+  font-style: italic;
 }
 
 .form h3 {
@@ -33,9 +35,9 @@ body {
   text-align: center;
   font-weight: 500;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 200px;
   height: 25px;
   border: solid rgb(5, 5, 58);
   border-radius: 4px;
@@ -44,17 +46,15 @@ body {
 
 .btn {
   display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 25px;
-  width: 150px;
+  margin: 25px auto;
+  width: 100%;
+  max-width: 200px;
+  height: 30px;
   border-radius: 20px;
   font-size: 16px;
   background-color: rgb(11, 1, 37);
   color: white;
   border: none;
-  width: 200px;
-  height: 30px;
   box-shadow: 0 2px 10px 0 white, 0 2px 10px 2px white;
 }
 
@@ -72,16 +72,27 @@ body {
 #weight-guide p {
   text-align: center;
   color: white;
-
 }
 
 #results {
   text-align: center;
   color: darkgray;
   font-size: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
+  margin: 20px auto;
   color: rgb(211, 233, 12);
   font-weight: bolder;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  #results {
+    font-size: 30px;
+  }
 }
